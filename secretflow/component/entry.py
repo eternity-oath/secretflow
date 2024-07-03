@@ -72,6 +72,7 @@ from secretflow.spec.v1.data_pb2 import StorageConfig
 from secretflow.spec.v1.evaluation_pb2 import NodeEvalParam, NodeEvalResult
 from secretflow.version import build_message
 from secretflow.component.compare import ss_compare_comp
+from secretflow.component.federated_computing import federated_computing_comp
 
 ALL_COMPONENTS = [
     union_comp,
@@ -111,6 +112,7 @@ ALL_COMPONENTS = [
     identity,
     model_export_comp,
     ss_compare_comp,
+    federated_computing_comp,
 ]
 
 COMP_LIST_NAME = "secretflow"

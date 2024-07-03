@@ -819,5 +819,20 @@
     "perform statistics on these columns": "对这些列执行统计",
     "report": "报告",
     "Output table statistics report.": "输出全表统计结果表"
+  },
+  "user/federated_computing:0.0.1": {
+    "user": "用户",
+    "federated_computing": "联合计算",
+    "FC between two parties.": "两方之间的联合计算。",
+    "0.0.1": "0.0.1",
+    "expression": "表达式",
+    "receiver_input": "receiver_input",
+    "Individual table for receiver": "接收器的单独表格",
+    "key": "钥匙",
+    "Column(s) used to join.": "用于联接的列。",
+    "sender_input": "sender_input",
+    "Individual table for sender": "发件人的单独表格",
+    "fc_output": "输出结果",
+    "Output result": "输出结果"
   }
 }

@@ -3744,6 +3744,59 @@
           ]
         }
       ]
+    },
+    {
+      "domain": "user",
+      "name": "federated_computing",
+      "desc": "FC between two parties.",
+      "version": "0.0.1",
+      "attrs": [
+        {
+          "name": "expression",
+          "desc": "expression.",
+          "type": "AT_STRING",
+          "atomic": {}
+        }
+      ],
+      "inputs": [
+        {
+          "name": "receiver_input",
+          "desc": "Individual table for receiver",
+          "types": [
+            "sf.table.individual"
+          ],
+          "attrs": [
+            {
+              "name": "key",
+              "desc": "Column(s) used to join.",
+              "colMinCntInclusive": "1"
+            }
+          ]
+        },
+        {
+          "name": "sender_input",
+          "desc": "Individual table for sender",
+          "types": [
+            "sf.table.individual"
+          ],
+          "attrs": [
+            {
+              "name": "key",
+              "desc": "Column(s) used to join.",
+              "colMinCntInclusive": "1"
+            }
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "fc_output",
+          "desc": "Output vertical table",
+          "types": [
+            "sf.table.vertical_table"
+          ]
+        }
+      ]
     }
   ]
 }
