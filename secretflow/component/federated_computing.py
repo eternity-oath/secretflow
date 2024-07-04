@@ -186,6 +186,7 @@ def two_party_balanced_fc_eval_fn(
         print(f"------------df columns ------------{list(df.columns)}")
         id_df = df[input_key]
         id_df["result"] = np.array(res).flatten()
+        print(f"------------out_path ------------{out_path}")
         id_df.to_csv(out_path, index=False)
 
     #  数据对齐
@@ -229,11 +230,6 @@ def two_party_balanced_fc_eval_fn(
     sf.wait(alice(save_ori_file)(sender_out_path, fc_output_path, sender_input_key, res))
     sf.wait(bob(save_ori_file)(receiver_out_path, fc_output_path, receiver_input_key, res))
     print("保存计算结果")
-
-    with ctx.tracer.trace_io():
-        upload_files(
-            ctx, {receiver_party: fc_output, sender_party: fc_output}, output_path
-        )
 
     output_db = DistData(
         name=fc_output,
